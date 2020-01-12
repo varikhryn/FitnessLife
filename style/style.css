@@ -357,6 +357,7 @@ header{
 
 .team-img img{
     width: 100%;
+    height: auto;
 }
 
 .team-member {
