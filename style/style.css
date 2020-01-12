@@ -60,7 +60,9 @@ header{
 
 .header__container{
     align-items: center;
+    -webkit-align-items: center;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
 }
 
 .header-logo h2{
@@ -268,6 +270,7 @@ header{
 .section-about-blocks-item h4,
 .section-about-blocks-item p{
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .section-about-blocks-item h4{
