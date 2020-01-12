@@ -355,6 +355,10 @@ header{
     display: flex;
 }
 
+.team-img img{
+    width: 100%;
+}
+
 .team-member {
     overflow: hidden;
 }
