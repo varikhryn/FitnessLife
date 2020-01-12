@@ -352,6 +352,7 @@ header{
 .team-member,
 .team-member .team-img{
     position: relative;
+    height: auto;
 }
 
 .team-member .team-img{
