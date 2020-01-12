@@ -729,6 +729,18 @@ header{
     .section-team-block-item:nth-of-type(n + 3){
         margin-top: 65px;
     }
+
+    .gallery-block-item{
+        width: 31%;
+    }
+
+    .gallery-block-item:nth-of-type(n+5) {
+        margin-top: 0;
+    }
+
+    .gallery-block-item:nth-of-type(n+4) {
+        margin-top: 65px;
+    }
 }
 /*======================================================================================================================
                                                                                       Media screen and max-width: 1024px
@@ -909,6 +921,37 @@ header{
     .section-about-blocks-item:nth-of-type(n + 3){
         margin-top: 60px;
     }
+
+    .gallery-block-item{
+        width: 46%;
+    }
+
+    .gallery-block-item:nth-of-type(n+4) {
+        margin-top: 0;
+    }
+
+    .gallery-block-item:nth-of-type(n+3) {
+        margin-top: 65px;
+    }
+
+    .gallery-description-popup{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-bottom: 65px;
+    }
+
+    .gallery-description-popup .description{
+        width: 100%;
+    }
+
+    .gallery-description-popup img{
+        width: 100%;
+    }
+
+    .gallery-port .description{
+        padding: 0;
+    }
 }
 
 /*======================================================================================================================
@@ -944,6 +987,17 @@ header{
         margin-top: 65px;
     }
 
+    .gallery-block-item{
+        width: 100%;
+    }
+
+    .gallery-block-item:nth-of-type(n+3) {
+        margin-top: 0;
+    }
+
+    .gallery-block-item:nth-of-type(n+2) {
+        margin-top: 65px;
+    }
 }
 /*======================================================================================================================
                                                                                        Media screen and max-width: 680px
