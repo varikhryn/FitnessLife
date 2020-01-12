@@ -52,7 +52,8 @@ header{
 
 .header__container,
 .section-about__container,
-.section-team__container{
+.section-team__container,
+.section-gallery-container{
     width: 90%;
     margin: 0 auto;
 }
@@ -118,7 +119,7 @@ header{
 
 .header-contact{
     position: absolute;
-    bottom: -41px;
+    bottom: -34px;
     right: 5%;
 }
 
@@ -147,7 +148,7 @@ header{
     min-height: 640px;
     height: 100vh;
     background: url("../images/bg-main-100vh.jpg") top center no-repeat;
-    background-position-y: 110px;
+    background-position-y: 80px;
     background-size: cover;
     align-items: flex-start;
     justify-content: center;
@@ -447,8 +448,6 @@ header{
     text-align: left;
 }
 
-
-
 .team-member .team-s-link a {
     margin: 0 10px;
     color: #333;
@@ -483,6 +482,234 @@ header{
     font-family: "Oswald";
     color: rgb(175, 175, 175);
     text-transform: uppercase;
+}
+
+/****************************************   Section Gallery   ***********************************************************/
+.section-gallery{
+    width: 100%;
+    padding: 80px 0;
+}
+
+.section-gallery-container{
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gallery-title{
+    margin-bottom: 65px;
+}
+
+.gallery-title h2{
+    font-size: 24px;
+    font-family: "Oswald";
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.gallery-title h2:before{
+    content: "";
+    position: absolute;
+    width: 26%;
+    left: 37%;
+    bottom: -10px;
+    height: 1px;
+    background-color: #202020;
+}
+
+.gallery-title p{
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgb(119, 119, 119);
+    line-height: 1.75;
+    text-align: center;
+}
+
+.gallery-img-items{
+    width: 100%;
+}
+
+
+/*.gallery-block,
+.gallery-description-popup{
+    width: 90%;
+    margin: 0 auto;
+}*/
+
+
+.gallery-img-items{
+    position: relative;
+}
+.gallery-block,
+.gallery-description-popup{
+    width: 100%;
+}
+
+.gallery-description-popup{
+    padding-top: 50px;
+}
+
+.gallery-block-items{
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+
+.gallery-block-item:nth-of-type(n + 5){
+    margin-top: 65px;
+}
+
+.gallery-block-item{
+    width: 23%;
+}
+
+.gallery-item__img{
+    position: relative;
+}
+
+.gallery-item__img:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(226, 80, 80, 0.5);
+    cursor: pointer;
+}
+
+.gallery-item__img:hover::after{
+    content: url("../images/gallery-magn.png");
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    color: rgb(255, 255, 255);
+    left: calc(50% - 21px);
+    top: calc(50% - 21px);
+}
+
+.gallery-block-item img,
+.gallery-block-item a{
+    width: 100%;
+}
+
+.gallery-port {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    background-color: #fafafa;
+    z-index: 103;
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    border-bottom: 1px solid #d0d0d0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.gallery-description-popup{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.gallery-port img {
+    width: 50%;
+}
+.gallery-port .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    max-height: 100%;
+    padding: 0 40px 40px;
+    overflow: auto;
+}
+.gallery-port h1 {
+    font-size: 26px;
+    font-family: "Oswald";
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.gallery-port p{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(175, 175, 175);
+}
+
+.gallery-port > * {
+    opacity: 0;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.gallery-port.item_open {
+    visibility: visible;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.gallery-port > * {
+    opacity: 1;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.gallery-btn-close {
+    width: 21px;
+    height: 21px;
+    background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2021%2021%22%0A%09%20enable-background%3D%22new%200%200%2021%2021%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22layer1%22%20transform%3D%22translate%280%2C-1031.3622%29%22%3E%0A%09%3Cpath%20id%3D%22path2987%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M0%2C1031.4l21%2C21%22/%3E%0A%09%3Cpath%20id%3D%22path2989%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M21%2C1031.4l-21%2C21%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A%0A) no-repeat;
+    position: absolute;
+    right: 10px;
+    top: -121px;
+    opacity: 0;
+    z-index: 1004;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.item_open .gallery-btn-close {
+    opacity: 1;
+    top: 10%;
+    right: -3%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-item__img,
+.gallery-block-item-description h4,
+.gallery-block-item-description p{
+    margin-bottom: 15px;
+}
+
+.gallery-block-item-description h4{
+    font-size: 16px;
+    font-family: "Oswald";
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gallery-block-item-description p{
+    font-size: 14px;
+    font-family: "Oswald";
+    color: rgb(175, 175, 175);
 }
 
 /*======================================================================================================================
