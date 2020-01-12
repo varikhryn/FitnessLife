@@ -532,14 +532,6 @@ header{
     width: 100%;
 }
 
-
-/*.gallery-block,
-.gallery-description-popup{
-    width: 90%;
-    margin: 0 auto;
-}*/
-
-
 .gallery-img-items{
     position: relative;
 }
@@ -648,6 +640,7 @@ header{
     font-size: 16px;
     font-family: "Oswald";
     color: rgb(175, 175, 175);
+    margin-bottom: 15px;
 }
 
 .gallery-port > * {
